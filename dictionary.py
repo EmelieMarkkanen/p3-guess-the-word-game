@@ -1,3 +1,5 @@
+#List of words that will be generated to the game
+
 dictionary = [
     'chill',
     'seed',

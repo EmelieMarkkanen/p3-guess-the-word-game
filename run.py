@@ -17,11 +17,18 @@ def welcomeMessage():
             print("Name must be letters only")
             continue
         else:
-            print(f"Welcome to Guess the word, {player_name}!")
+            print(f"Welcome to Guess the word, {player_name}!\n")
             break
     
     print("The rules are simple; you have 6 lives and need to guess the secret word.")
     print("Guess the wrong letter and loose a life, guess all the letters of the whole word correctly to win!\n")
+
+def get_word():
+    """
+    Generates a random word from dictionary.py in capital letters
+    """
+    word = random.choice(dictionary)
+    return word.upper() 
 
 
 def main():
@@ -29,5 +36,7 @@ def main():
     Call functions in game
     """
     welcomeMessage()
+    get_word()
+    game()
     
 main()
