@@ -56,11 +56,11 @@ def game():
         if word == display:
             print(f"You guessed the correct word! The word was {word}!")
             game_over = True
-            print("Would you like to play again? Type 'yes' to play, type 'no' to quit")
+            print("Would you like to play again? Type 'yes' to play, type 'no' to quit.")
         if tries == 0:
             print(f"Sorry, you are out of tries and loose the game. The word was {word}.")
             game_over = True
-            print("Would you like to play again? Type 'yes' to play, type 'no' to quit")
+            print("Would you like to play again? Type 'yes' to play, type 'no' to quit.")
         
 
 def main():
