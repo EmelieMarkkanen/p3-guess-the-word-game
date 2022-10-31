@@ -5,7 +5,7 @@ import random
 import sys
 from dictionary import dictionary
 
-def welcomeMessage():
+def welcome_message():
     """
     Welcome player, explain the rules and let them enter their name.
     """
@@ -36,6 +36,7 @@ def game():
     tries = 6
     display = "_" * len(word)
     game_over = False
+    guessed_letters = []
 
     while not game_over:
         print(f"You have " + str(tries) + " tries left")
@@ -45,11 +46,11 @@ def game():
         if not guess.isalpha():
             print("You can only guess alphabetical letters")
             continue
-        if guess in display:
-            print("You have already guessed that letter")
-            continue
         if len(guess) > 1:
             print("You can only guess one letter at a time")
+            continue
+        if guess in guessed_letters:
+            print("You have already guessed that letter")
             continue
 
         i = 0
@@ -59,9 +60,11 @@ def game():
                 display = display[:i] + guess + display[i + 1:]
                 i += 1
             print("You guessed one letter correctly!")
+            guessed_letters.append(guess)
         else:
             print(f"Sorry, the letter {guess} was not in the word.")
             tries -= 1
+            guessed_letters.append(guess)
 
         if word == display:
             print(f"You guessed the correct word! The word was {word}!\n")
@@ -74,7 +77,7 @@ def game():
 
     if play_again == "y":
         print("Let's play again, good luck!\n")
-        welcomeMessage()
+        welcome_message()
         game()
     else: 
         print("Thank you for playing, good bye!")
@@ -84,7 +87,7 @@ def main():
     """
     Call game functions
     """
-    welcomeMessage()
+    welcome_message()
     game()
 
 main()
