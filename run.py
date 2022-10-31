@@ -42,6 +42,10 @@ def game():
         print(display)
         guess = input("Please guess a letter: ").upper()
 
+        if not guess.isalpha():
+            print("You can only guess alphabetical letters")
+            continue
+
         i = 0
         if guess in word:
             while word.find(guess, i) != -1:
@@ -50,19 +54,19 @@ def game():
                 i += 1
             print("You guessed correctly!")
         else:
-            print("Sorry, that letter was not in the word.")
+            print(f"Sorry, the letter {guess} was not in the word.")
             tries -= 1
 
         if word == display:
             print(f"You guessed the correct word! The word was {word}!\n")
             game_over = True
         if tries == 0:
-            print(f"Sorry, you are out of tries and loose the game. The word was {word}.\n")
+            print(f"Sorry, you are out of tries and lost the game. The word was {word}.\n")
             game_over = True
         
-    play_again = input("Would you like to play again? Type 'yes' to play, type any other key to quit.\n")
+    play_again = input("Would you like to play again? Type 'y' to play, type any other key to quit.\n")
 
-    if play_again == "yes":
+    if play_again == "y":
         print("Let's play again, good luck!\n")
         welcomeMessage()
         game()
