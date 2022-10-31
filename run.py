@@ -2,6 +2,7 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import random
+import sys
 from dictionary import dictionary
 
 word = "cat"
@@ -14,7 +15,7 @@ def welcomeMessage():
     player_name = None
     while True:
 
-        player_name = input("Please enter your name\n")
+        player_name = input("Please enter your name\n").capitalize()
 
         if not player_name.isalpha():
             print("Name must be letters only")
@@ -50,18 +51,25 @@ def game():
                 i += 1
             print("You guessed correctly!")
         else:
-            print("Sorry, that letter was not in the word :(")
+            print("Sorry, that letter was not in the word.")
             tries -= 1
 
         if word == display:
-            print(f"You guessed the correct word! The word was {word}!")
+            print(f"You guessed the correct word! The word was {word}!\n")
             game_over = True
-            print("Would you like to play again? Type 'yes' to play, type 'no' to quit.")
         if tries == 0:
-            print(f"Sorry, you are out of tries and loose the game. The word was {word}.")
+            print(f"Sorry, you are out of tries and loose the game. The word was {word}.\n")
             game_over = True
-            print("Would you like to play again? Type 'yes' to play, type 'no' to quit.")
         
+    play_again = input("Would you like to play again? Type 'yes' to play, type any other key to quit.\n")
+
+    if play_again == "yes":
+        print("Let's play again, good luck!\n")
+        welcomeMessage()
+        game()
+    else: 
+        print("Thank you for playing, good bye!")
+        sys.exit(0)
 
 def main():
     """
