@@ -5,6 +5,12 @@ import random
 import sys
 from dictionary import dictionary
 
+#Colorama module
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
+
+
 def welcome_message():
     """
     Welcome player, explain the rules and let them enter their name.
@@ -18,21 +24,22 @@ def welcome_message():
             print("Name must be letters only")
             continue
         else:
-            print(f"Welcome to Guess the word, {player_name}!\n")
+            print("Welcome to Guess the word, " + Fore.MAGENTA + f"{player_name}" + Fore.WHITE + "!\n")
             break
     
-    print("The rules are simple; you have 6 tries and need to guess the secret word.")
-    print("Guess the wrong letter and loose a try, guess all the letters of the whole word correctly to win!\n")
+    print("The rules are simple; you have 6 tries to guess the secret word.")
+    print("Guess the wrong letter and go down one try, guess all the letters of the whole word correctly to win!\n")
 
-def get_word():
+#def get_word():
     """
     Generates a random word from dictionary.py in capital letters
     """
-    word = random.choice(dictionary)
-    return word.upper()
+    #word = random.choice(dictionary)
+    #return word.upper()
 
 def game():
-    word = get_word()
+    #word = get_word()
+    word = "cat".upper()
     tries = 6
     display = "_" * len(word)
     game_over = False
@@ -44,13 +51,13 @@ def game():
         guess = input("Please guess a letter: ").upper()
 
         if not guess.isalpha():
-            print("You can only guess alphabetical letters")
+            print(Fore.YELLOW + "You can only guess alphabetical letters")
             continue
         if len(guess) > 1:
-            print("You can only guess one letter at a time")
+            print(Fore.YELLOW + "You can only guess one letter at a time")
             continue
         if guess in guessed_letters:
-            print("You have already guessed that letter")
+            print(Fore.YELLOW + "You have already guessed that letter")
             continue
 
         i = 0
@@ -59,18 +66,18 @@ def game():
                 i = word.find(guess, i)
                 display = display[:i] + guess + display[i + 1:]
                 i += 1
-            print("You guessed one letter correctly!")
+            print(Fore.BLUE + "You guessed a correct letter!")
             guessed_letters.append(guess)
         else:
-            print(f"Sorry, the letter {guess} was not in the word.")
+            print(Fore.RED + f"Sorry, the letter {guess} was not in the word.")
             tries -= 1
             guessed_letters.append(guess)
 
         if word == display:
-            print(f"You guessed the correct word! The word was {word}!\n")
+            print(Fore.GREEN + f"You guessed the correct word! The word was {word}!\n")
             game_over = True
         if tries == 0:
-            print(f"Sorry, you are out of tries and lost the game. The word was {word}.\n")
+            print(Fore.RED + f"Sorry, you are out of tries and lost the game. The word was {word}.\n")
             game_over = True
         
     play_again = input("Would you like to play again? Type 'y' to play, type any other key to quit.\n")
