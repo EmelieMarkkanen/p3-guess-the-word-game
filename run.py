@@ -18,7 +18,7 @@ def welcome_message():
     player_name = None
     while True:
 
-        player_name = input("Please enter your name\n").capitalize()
+        player_name = input("Please enter your name to play\n").capitalize()
 
         if not player_name.isalpha():
             print("Name must be letters only")

@@ -33,3 +33,4 @@ Happy coding!
 
 Sources:
 https://pypi.org/project/colorama/
+https://www.lucidchart.com/pages/
