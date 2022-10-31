@@ -28,7 +28,7 @@ def welcome_message():
             break
     
     print("The rules are simple; you have 6 tries to guess the secret word.")
-    print("Guess the wrong letter and go down one try, guess all the letters of the whole word correctly to win!\n")
+    print("Guess the wrong letter and go down one try, guess all the letters of the word correctly to win!\n")
 
 def get_word():
     """
@@ -46,6 +46,7 @@ def game():
 
     while not game_over:
         print(f"You have " + str(tries) + " tries left")
+        print(f"You have used these letters: {guessed_letters}")
         print(display)
         guess = input("Please guess a letter: ").upper()
 
@@ -68,7 +69,7 @@ def game():
             print(Fore.BLUE + "You guessed a correct letter!")
             guessed_letters.append(guess)
         else:
-            print(Fore.RED + f"Sorry, the letter {guess} was not in the word.")
+            print(Fore.RED + f"Sorry, the letter {guess} is not in the word.")
             tries -= 1
             guessed_letters.append(guess)
 
