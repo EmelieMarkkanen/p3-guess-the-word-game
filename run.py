@@ -13,7 +13,7 @@ colorama.init(autoreset=True)
 
 def welcome_message():
     """
-    Welcome player, explain the rules and let them enter their name.
+    Welcome the player, explain the rules and let them enter their name.
     """
     player_name = None
     while True:
@@ -30,16 +30,15 @@ def welcome_message():
     print("The rules are simple; you have 6 tries to guess the secret word.")
     print("Guess the wrong letter and go down one try, guess all the letters of the whole word correctly to win!\n")
 
-#def get_word():
+def get_word():
     """
     Generates a random word from dictionary.py in capital letters
     """
-    #word = random.choice(dictionary)
-    #return word.upper()
+    word = random.choice(dictionary)
+    return word.upper()
 
 def game():
-    #word = get_word()
-    word = "cat".upper()
+    word = get_word()
     tries = 6
     display = "_" * len(word)
     game_over = False
@@ -80,7 +79,7 @@ def game():
             print(Fore.RED + f"Sorry, you are out of tries and lost the game. The word was {word}.\n")
             game_over = True
         
-    play_again = input("Would you like to play again? Type 'y' to play, type any other key to quit.\n")
+    play_again = input(Fore.YELLOW + "Would you like to play again? Type 'y' to play again, type any other key to quit.\n")
 
     if play_again == "y":
         print("Let's play again, good luck!\n")
