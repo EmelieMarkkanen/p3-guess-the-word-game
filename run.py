@@ -45,6 +45,12 @@ def game():
         if not guess.isalpha():
             print("You can only guess alphabetical letters")
             continue
+        if guess in display:
+            print("You have already guessed that letter")
+            continue
+        if len(guess) > 1:
+            print("You can only guess one letter at a time")
+            continue
 
         i = 0
         if guess in word:
@@ -52,7 +58,7 @@ def game():
                 i = word.find(guess, i)
                 display = display[:i] + guess + display[i + 1:]
                 i += 1
-            print("You guessed correctly!")
+            print("You guessed one letter correctly!")
         else:
             print(f"Sorry, the letter {guess} was not in the word.")
             tries -= 1
