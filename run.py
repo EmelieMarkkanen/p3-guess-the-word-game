@@ -5,9 +5,6 @@ import random
 import sys
 from dictionary import dictionary
 
-word = "cat"
-#word = random.choice(dictionary)
-
 def welcomeMessage():
     """
     Welcome player, explain the rules and let them enter their name.
@@ -27,13 +24,15 @@ def welcomeMessage():
     print("The rules are simple; you have 6 tries and need to guess the secret word.")
     print("Guess the wrong letter and loose a try, guess all the letters of the whole word correctly to win!\n")
 
-#def get_word():
+def get_word():
     """
     Generates a random word from dictionary.py in capital letters
-    return word.upper() 
     """
+    word = random.choice(dictionary)
+    return word.upper()
 
 def game():
+    word = get_word()
     tries = 6
     display = "_" * len(word)
     game_over = False
@@ -41,7 +40,7 @@ def game():
     while not game_over:
         print(f"You have " + str(tries) + " tries left")
         print(display)
-        guess = input("Please guess a letter: ")
+        guess = input("Please guess a letter: ").upper()
 
         i = 0
         if guess in word:
