@@ -9,14 +9,18 @@ colorama.init(autoreset=True)
 
 def title_page():
     print("""
-   _____                     _   _                                _ _ 
-  / ____|                   | | | |                              | | |
- | |  __ _   _  ___  ___ ___| |_| |__   _____      _____  _ __ __| | |
- | | |_ | | | |/ _ \/ __/ __| __| '_ \ / _ \ \ /\ / / _ \| '__/ _` | |
- | |__| | |_| |  __/\__ \__ \ |_| | | |  __/\ V  V / (_) | | | (_| |_|
-  \_____|\__,_|\___||___/___/\__|_| |_|\___| \_/\_/ \___/|_|  \__,_(_)
+   _____                       _   _                   
+  / ____|                     | | | |                  
+ | |  __ _   _  ___  ___ ___  | |_| |__   ___          
+ | | |_ | | | |/ _ \/ __/ __| | __| '_ \ / _ \         
+ | |__| | |_| |  __/\__ \__ \ | |_| | | |  __/         
+  \_____|\__,_|\___||___/___/  \__|_| |_|\___|     _ _ 
+                        | |                       | | |
+  ___  ___  ___ _ __ ___| |___      _____  _ __ __| | |
+ / __|/ _ \/ __| '__/ _ \ __\ \ /\ / / _ \| '__/ _` | |
+ \__ \  __/ (__| | |  __/ |_ \ V  V / (_) | | | (_| |_|
+ |___/\___|\___|_|  \___|\__| \_/\_/ \___/|_|  \__,_(_)
     """)
-
 
 def welcome_message():
     """
@@ -31,11 +35,11 @@ def welcome_message():
             print("Name must be letters only") #Player name can only be alphabetical letters
             continue
         else:
-            print("Welcome to Guess the word, " + Fore.CYAN + f"{player_name}" + Fore.WHITE + "!\n") #Welcome player to the game
+            print("Welcome to Guess the secret word, " + Fore.CYAN + f"{player_name}" + Fore.WHITE + "!\n") #Welcome player to the game
             break
     
     print("The rules are simple; you have 6 tries to guess the secret word.")
-    print("Guess the wrong letter and go down one try \nguess all the letters of the word correctly to win!\n")
+    print("Guess the wrong letter and go down one try \nGuess all the letters of the word correctly to win!\n")
 
 def get_word():
     """
