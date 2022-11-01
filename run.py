@@ -21,7 +21,7 @@ def welcome_message():
             print("Name must be letters only") #Player name can only be alphabetical letters
             continue
         else:
-            print("Welcome to Guess the word, " + Fore.MAGENTA + f"{player_name}" + Fore.WHITE + "!\n") #Welcome player to the game
+            print("Welcome to Guess the word, " + Fore.CYAN + f"{player_name}" + Fore.WHITE + "!\n") #Welcome player to the game
             break
     
     print("The rules are simple; you have 6 tries to guess the secret word.")
@@ -56,7 +56,7 @@ def game():
 
     while not game_over:
         print(f"You have " + str(tries) + " tries left") #Show amount of tries left
-        print(f"You have used these letters: {' '.join(str(x) for x in guessed_letters)}") #Show guessed letters
+        print(f"You have used these letters: {' '.join(str(x) for x in guessed_letters)} \n") #Show guessed letters
         print(display)
         guess = input("Please guess a letter: ").upper() #Ask player to guess a letter
 
@@ -92,7 +92,7 @@ def game():
             print(Fore.RED + f"Sorry, you are out of tries and lost the game. The word was {word}.\n") #Player ran out of tries and loose the game
             game_over = True
         
-    play_again = input(Fore.YELLOW + "Would you like to play again? Type 'y' to play again, type any other key to quit.\n") #Ask player to restart or quit game
+    play_again = input(Fore.YELLOW + "Would you like to play again? \nType 'y' to play again, type any other key to quit.\n") #Ask player to restart or quit game
 
     if play_again == "y":
         print("Let's play again, good luck!\n") #Restart game
