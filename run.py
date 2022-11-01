@@ -29,9 +29,9 @@ def select_difficulty():
     Let player set the game difficulty level
     """
     print("Please select difficulty level\n")
-    print("Type 'E' for Easy")
-    print("Type 'N' for Normal")
-    print("Type 'H' for Hard")
+    print(Fore.GREEN + "Type 'E' for Easy")
+    print(Fore.YELLOW + "Type 'N' for Normal")
+    print(Fore.RED + "Type 'H' for Hard")
 
     difficulty = False
     while not difficulty:
@@ -94,12 +94,12 @@ def game():
     display = "_" * len(word)
     game_over = False
     guessed_letters = []
-    print(f"The rules are simple; you have {tries} tries to guess the secret word.")
-    print("Guess the wrong letter and go down one try \nGuess all the letters of the word correctly to win!\n")
+    print(Fore.CYAN + f"\nThe rules are simple; you have {tries} tries to guess the secret word.")
+    print(Fore.CYAN + "Guess the wrong letter and go down one try \nGuess all the letters of the word correctly to win!\n")
 
     while not game_over:
         print(f"You have " + str(tries) + " tries left")
-        print(f"You have used these letters: {' '.join(str(x) for x in guessed_letters)} \n")
+        print(f"You have guessed these letters: {' '.join(str(x) for x in guessed_letters)} \n")
         print(display)
         guess = input("Please guess a letter: ").upper() 
 
