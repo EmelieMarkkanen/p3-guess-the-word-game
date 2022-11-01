@@ -34,3 +34,4 @@ Happy coding!
 Sources:
 https://pypi.org/project/colorama/
 https://www.lucidchart.com/pages/
+https://www.reddit.com/r/learnpython/comments/l10k8h/is_there_a_way_to_unpack_a_list_with_f_stings/

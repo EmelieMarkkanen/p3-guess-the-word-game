@@ -1,6 +1,3 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
 import random
 import sys
 from dictionary import dictionary
@@ -74,16 +71,17 @@ def game():
             continue
         
         #Check if guessed letter is in the word
+        #Player guessed correct letter, add letter to word and add guessed letter to list
         i = 0
         if guess in word: 
             while word.find(guess, i) != -1:
                 i = word.find(guess, i)
                 display = display[:i] + guess + display[i + 1:]
                 i += 1
-            print(Fore.BLUE + "You guessed a correct letter!") #Player guessed correct letter
+            print(Fore.BLUE + "You guessed a correct letter!") 
             guessed_letters.append(guess)
-        else:
-            print(Fore.RED + f"Sorry, the letter {guess} is not in the word.") #Player guessed wrong letter
+        else: #Player guessed wrong letter, deduct one try and add guessed letter to list
+            print(Fore.RED + f"Sorry, the letter {guess} is not in the word.") 
             tries -= 1
             guessed_letters.append(guess)
 
