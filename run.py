@@ -35,7 +35,7 @@ def select_difficulty():
 
     difficulty = False
     while not difficulty:
-        options = input("").upper()
+        options = input().upper()
         if options == "E":
             difficulty = True
             tries = 10
@@ -113,7 +113,7 @@ def game():
             print(Fore.YELLOW + "You have already guessed that letter") #Player can only guess the same letter once
             continue
         
-        #Check if letter is correct/incorrect, deduct tries if incorrect, add letter to guessed_letters
+        #Check if letter is correct/incorrect, deduct tries if incorrect, add letter to guessed_letters, display if correct letter
         i = 0
         if guess in word: 
             while word.find(guess, i) != -1:
@@ -134,16 +134,15 @@ def game():
             print(Fore.RED + f"Sorry, you are out of tries and lost the game. The word was {word}.\n") #Player ran out of tries and loose the game
             game_over = True
         
-    play_again = input(Fore.YELLOW + "Would you like to play again? \nType 'y' to play again, type any other key to quit.\n") #Ask player to restart or quit game
+    play_again = input(Fore.YELLOW + "Would you like to play again? \nType 'Y' to play again, or type any other key to quit.\n").upper() #Ask player to restart or quit game
 
-    if play_again == "y":
-        print("Let's play again, good luck!\n") #Restart game
-        welcome_message()
+    if play_again == "Y":
+        print(Fore.GREEN + "Let's play again, good luck!\n") #Restart game
         game()
     else: 
         print("Thank you for playing, good bye!") #Quit game
         sys.exit()
-
+        
 def main():
     """
     Call game functions
