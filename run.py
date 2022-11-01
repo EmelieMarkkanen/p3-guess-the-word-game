@@ -46,7 +46,7 @@ def game():
 
     while not game_over:
         print(f"You have " + str(tries) + " tries left")
-        print(f"You have used these letters: {guessed_letters}")
+        print(f"You have used these letters: {' '.join(str(x) for x in guessed_letters)}")
         print(display)
         guess = input("Please guess a letter: ").upper()
 
