@@ -28,7 +28,7 @@ def select_difficulty():
     """
     Let player set the game difficulty level
     """
-    print("Please select difficulty level\n")
+    print("Please select a difficulty level\n")
     print(Fore.GREEN + "Type 'E' for Easy")
     print(Fore.YELLOW + "Type 'N' for Normal")
     print(Fore.RED + "Type 'H' for Hard")
@@ -49,7 +49,7 @@ def select_difficulty():
             tries = 5
             return tries
         else:
-            print("Please select E, N or H to choose game difficulty level")
+            print("Please select E, N or H to choose game difficulty level.")
 
 def welcome_message():
     """
@@ -95,10 +95,10 @@ def game():
     game_over = False
     guessed_letters = []
     print(Fore.CYAN + f"\nThe rules are simple; you have {tries} tries to guess the secret word.")
-    print(Fore.CYAN + "Guess the wrong letter and go down one try \nGuess all the letters of the word correctly to win!\n")
+    print(Fore.CYAN + "Guess the wrong letter and go down one try. \nGuess all the letters of the word correctly to win!\n")
 
     while not game_over:
-        print(f"You have " + str(tries) + " tries left")
+        print(f"You have " + str(tries) + " tries left.")
         print(f"You have guessed these letters: {' '.join(str(x) for x in guessed_letters)} \n")
         print(display)
         guess = input("Please guess a letter: ").upper() 
@@ -128,10 +128,10 @@ def game():
             guessed_letters.append(guess)
 
         if word == display:
-            print(Fore.GREEN + f"You guessed the correct word! The word was {word}!\n") #Player guessed the right word and win the game
+            print(Fore.GREEN + f"\nGood job! You guessed the correct word! The word was {word}!\n") #Player guessed the right word and win the game
             game_over = True
         if tries == 0:
-            print(Fore.RED + f"Sorry, you are out of tries and lost the game. The word was {word}.\n") #Player ran out of tries and loose the game
+            print(Fore.RED + f"\nOh no! You are out of tries and lost the game. The word was {word}.\n") #Player ran out of tries and loose the game
             game_over = True
         
     play_again = input(Fore.YELLOW + "Would you like to play again? \nType 'Y' to play again, or type any other key to quit.\n").upper() #Ask player to restart or quit game
