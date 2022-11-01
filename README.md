@@ -1,34 +1,14 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Guess the word game
 
-Welcome Emelie Markkanen Åberg ,
+## Milestone project 3
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+This is a Guess the secret word game, wherein the player have a set amounts of tries to guess the secret word to win the game. 
+The game generates a random secret word every round. 
+The player chooses the difficulty level of the game; easy, normal or hard. Easy gives the player 10 tries to win, normal 7 tries and hard 5 tries. 
+If the player guess the whole word correctly they win the game, if they run out of tries they loose and will have the option to start over.
 
-## Reminders
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
 
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
 
 
 Sources:
