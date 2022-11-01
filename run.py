@@ -7,6 +7,16 @@ import colorama
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
 
+def title_page():
+    print("""
+   _____                     _   _                                _ _ 
+  / ____|                   | | | |                              | | |
+ | |  __ _   _  ___  ___ ___| |_| |__   _____      _____  _ __ __| | |
+ | | |_ | | | |/ _ \/ __/ __| __| '_ \ / _ \ \ /\ / / _ \| '__/ _` | |
+ | |__| | |_| |  __/\__ \__ \ |_| | | |  __/\ V  V / (_) | | | (_| |_|
+  \_____|\__,_|\___||___/___/\__|_| |_|\___| \_/\_/ \___/|_|  \__,_(_)
+    """)
+
 
 def welcome_message():
     """
@@ -25,7 +35,7 @@ def welcome_message():
             break
     
     print("The rules are simple; you have 6 tries to guess the secret word.")
-    print("Guess the wrong letter and go down one try, guess all the letters of the word correctly to win!\n")
+    print("Guess the wrong letter and go down one try \nguess all the letters of the word correctly to win!\n")
 
 def get_word():
     """
@@ -106,6 +116,7 @@ def main():
     """
     Call game functions
     """
+    title_page()
     welcome_message()
     game()
 
