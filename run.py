@@ -8,7 +8,9 @@ from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
 
 def title_page():
-    print("""
+    """Show title page for game
+    """
+    print(Fore.BLUE + """
    _____                       _   _                   
   / ____|                     | | | |                  
  | |  __ _   _  ___  ___ ___  | |_| |__   ___          
@@ -22,9 +24,36 @@ def title_page():
  |___/\___|\___|_|  \___|\__| \_/\_/ \___/|_|  \__,_(_)
     """)
 
+def select_difficulty():
+    """
+    Let player set the game difficulty level
+    """
+    print("Please select difficulty level\n")
+    print("Type 'E' for Easy")
+    print("Type 'N' for Normal")
+    print("Type 'H' for Hard")
+
+    difficulty = False
+    while not difficulty:
+        options = input("").upper()
+        if options == "E":
+            difficulty = True
+            tries = 10
+            return tries
+        elif options == "N":
+            difficulty = True
+            tries = 7
+            return tries
+        elif options == "H":
+            difficulty = True
+            tries = 5
+            return tries
+        else:
+            print("Please select E, N or H to choose game difficulty level")
+
 def welcome_message():
     """
-    Welcome the player, explain the rules and let them enter their name.
+    Welcome the player and let them enter their name.
     """
     player_name = None
     while True:
@@ -35,11 +64,8 @@ def welcome_message():
             print("Name must be letters only") #Player name can only be alphabetical letters
             continue
         else:
-            print("Welcome to Guess the secret word, " + Fore.CYAN + f"{player_name}" + Fore.WHITE + "!\n") #Welcome player to the game
+            print("\nWelcome to Guess the secret word, " + Fore.CYAN + f"{player_name}" + Fore.WHITE + "!\n") #Welcome player to the game
             break
-    
-    print("The rules are simple; you have 6 tries to guess the secret word.")
-    print("Guess the wrong letter and go down one try \nGuess all the letters of the word correctly to win!\n")
 
 def get_word():
     """
@@ -50,7 +76,8 @@ def get_word():
 
 def game():
     """
-    Player have 6 tries to guess the word
+    Explain the rules of the game
+    Player have X tries to guess the word - generated from select_difficulty()
     Generates random word from dictionary.py and counts amount of letters in word
     Player have to guess only alphabetical letters
     Player can only guess the same letter once
@@ -63,16 +90,18 @@ def game():
     After win/lose option to play again will be asked
     """
     word = get_word() 
-    tries = 6
+    tries = select_difficulty()
     display = "_" * len(word)
     game_over = False
     guessed_letters = []
+    print(f"The rules are simple; you have {tries} tries to guess the secret word.")
+    print("Guess the wrong letter and go down one try \nGuess all the letters of the word correctly to win!\n")
 
     while not game_over:
-        print(f"You have " + str(tries) + " tries left") #Show amount of tries left
-        print(f"You have used these letters: {' '.join(str(x) for x in guessed_letters)} \n") #Show guessed letters
+        print(f"You have " + str(tries) + " tries left")
+        print(f"You have used these letters: {' '.join(str(x) for x in guessed_letters)} \n")
         print(display)
-        guess = input("Please guess a letter: ").upper() #Ask player to guess a letter
+        guess = input("Please guess a letter: ").upper() 
 
         if not guess.isalpha():
             print(Fore.YELLOW + "You can only guess alphabetical letters") #Player can only guess alphabetical letters
@@ -84,8 +113,7 @@ def game():
             print(Fore.YELLOW + "You have already guessed that letter") #Player can only guess the same letter once
             continue
         
-        #Check if guessed letter is in the word
-        #Player guessed correct letter, add letter to word and add guessed letter to list
+        #Check if letter is correct/incorrect, deduct tries if incorrect, add letter to guessed_letters
         i = 0
         if guess in word: 
             while word.find(guess, i) != -1:
@@ -94,7 +122,7 @@ def game():
                 i += 1
             print(Fore.BLUE + "You guessed a correct letter!") 
             guessed_letters.append(guess)
-        else: #Player guessed wrong letter, deduct one try and add guessed letter to list
+        else: 
             print(Fore.RED + f"Sorry, the letter {guess} is not in the word.") 
             tries -= 1
             guessed_letters.append(guess)
@@ -114,7 +142,7 @@ def game():
         game()
     else: 
         print("Thank you for playing, good bye!") #Quit game
-        sys.exit(0)
+        sys.exit()
 
 def main():
     """

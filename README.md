@@ -37,3 +37,5 @@ https://www.lucidchart.com/pages/
 https://www.reddit.com/r/learnpython/comments/l10k8h/is_there_a_way_to_unpack_a_list_with_f_stings/
 
 Heroku https://p3-guess-the-word.herokuapp.com/
+
+ASCII Art Generator https://patorjk.com/software/taag/#p=display&h=2&v=2&f=Big&t=Guess%20the%0Asecretword!
