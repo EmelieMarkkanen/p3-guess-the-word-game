@@ -94,13 +94,13 @@ For this project I've used [Python](https://en.wikipedia.org/wiki/Python_(progra
 ### Player Experience
 
 ### Code testing
-Git pod have pep8 installed for code checking. 
+Gitpod have pep8 installed for code validation. No issues found except a few warnings about to long lines. 
 <br>
 Testing have been done continuously during creation. 
 
 ### Known issues
 One bug found by one user, but I've not been able to recreate the issue. The input line shows both player name and already guessed letters. 
-![](/workspace/p3-guess-the-word-game/docs/images/bug.jpg)
+![](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/bug.jpg)
 
 ## Deployment
 
