@@ -38,7 +38,7 @@ If the player guess the whole word correctly they win the game, if they run out 
 
 ## Screenshots of app
 
-![Different media screenshots](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Printscreen1.jpg)
+!(https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Printscreen1.jpg)
 
 ### Guess the word game
 
@@ -61,7 +61,9 @@ If the player guess the whole word correctly they win the game, if they run out 
 ![Lose game](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game5%20-%20lose.jpg)
 
 ## Flowchart
-![](image/pdf)
+I created the flowchart for this project using Lucidchart.
+<br>
+[View PDF of flowchart here](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/pdf/Guess-the-word-flowchart.pdf)
 
 ## User stories
 -
@@ -70,6 +72,8 @@ If the player guess the whole word correctly they win the game, if they run out 
 -
 
 ## Color scheme and imagery
+To add text color to the terminal I've used the imported library [Colorama](https://pypi.org/project/colorama/).
+To create the ASCII Art on the game start screen I've used [ASCII Art Generator](https://patorjk.com/software/taag/#p=display&h=2&v=2&f=Big&t=Guess%20the%0Asecretword!)
 
 
 ## Features
@@ -80,22 +84,42 @@ If the player guess the whole word correctly they win the game, if they run out 
 ## Technology
 
 ### Languages used
+For this project I've used [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ### Other applications used
+[Github](https://github.com/) and [Lucidchart](https://lucid.app/)
 
 ## Testing
 
 ### Player Experience
 
 ### Code testing
+Git pod have pep8 installed for code checking. 
+<br>
+
 
 ### Known issues
 
 ## Deployment
 
 ### Github and git
+1. I created a repository in Github, named it p3-guess-the-word-game, and used the template Code-Institute-org/python-essentials-template
+2. Once the repository is created, click the green button to the right (Gitpod) to open Gitpod
+3. In the terminal I've used the run.py file provided by the template
+4. I created a docs folder to hold PDF:s and images
+5. Once folders and files are created I used Git commands to add the changes in the files to the staging area and push the changes to my repository
 
 ### Heroku
+This project was deployed using Code Institutes mock terminal for Heroku.
+
+1. Log in to Heroku and click "New" and "Create new app"
+2. Name the new app and click "Create new app".
+3. In "Settings" select "BuildPack" and select Python and Node.js. (Python must be at the top of the list).
+4. While still in "Settings", click "Reveal Config Vars" and add the following; KEY: PORT, VALUE: 8000.
+5. Click on "Deploy" and select your deploy method and search for repository name.
+6. Click "Connect" on selected repository.
+7. Either choose "Enable Automatic Deploys" or "Deploy Branch" in the manual deploy section.
+8. Heroku will now deploy the app.
 
 ## Credits
 
@@ -104,13 +128,12 @@ If the player guess the whole word correctly they win the game, if they run out 
 ### Acknowledgement
 
 ### External sources used
-
-
-Sources:
-https://pypi.org/project/colorama/
-https://www.lucidchart.com/pages/
-https://www.reddit.com/r/learnpython/comments/l10k8h/is_there_a_way_to_unpack_a_list_with_f_stings/
+- https://pypi.org/project/colorama/
+- https://www.lucidchart.com/pages/
+- https://www.reddit.com/r/learnpython/comments/l10k8h/is_there_a_way_to_unpack_a_list_with_f_stings/
+- ASCII Art Generator https://patorjk.com/software/taag/#p=display&h=2&v=2&f=Big&t=Guess%20the%0Asecretword!
+- https://www.w3schools.com/python/default.asp
 
 Heroku https://p3-guess-the-word.herokuapp.com/
 
-ASCII Art Generator https://patorjk.com/software/taag/#p=display&h=2&v=2&f=Big&t=Guess%20the%0Asecretword!
+

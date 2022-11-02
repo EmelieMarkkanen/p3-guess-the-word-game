@@ -5,7 +5,9 @@ from dictionary import dictionary
 #Colorama module
 import colorama
 from colorama import Fore, Back, Style
+
 colorama.init(autoreset=True)
+
 
 def title_page():
     """Show title page for game
@@ -23,6 +25,7 @@ def title_page():
  \__ \  __/ (__| | |  __/ |_ \ V  V / (_) | | | (_| |_|
  |___/\___|\___|_|  \___|\__| \_/\_/ \___/|_|  \__,_(_)
     """)
+
 
 def select_difficulty():
     """
@@ -51,6 +54,7 @@ def select_difficulty():
         else:
             print("Please select E, N or H to choose game difficulty level.")
 
+
 def welcome_message():
     """
     Welcome the player and let them enter their name.
@@ -67,12 +71,14 @@ def welcome_message():
             print("\nWelcome to Guess the secret word, " + Fore.CYAN + f"{player_name}" + Fore.WHITE + "!\n") #Welcome player to the game
             break
 
+
 def get_word():
     """
     Generates a random word from dictionary.py in capital letters
     """
     word = random.choice(dictionary)
     return word.upper()
+
 
 def game():
     """
@@ -113,7 +119,10 @@ def game():
             print(Fore.YELLOW + "You have already guessed that letter") #Player can only guess the same letter once
             continue
         
-        #Check if letter is correct/incorrect, deduct tries if incorrect, add letter to guessed_letters, display if correct letter
+        #Check if letter is correct/incorrect
+        #deduct tries if incorrect, 
+        #add letter to guessed_letters
+        # display if correct letter
         i = 0
         if guess in word: 
             while word.find(guess, i) != -1:
@@ -127,11 +136,11 @@ def game():
             tries -= 1
             guessed_letters.append(guess)
 
-        if word == display:
-            print(Fore.GREEN + f"\nGood job! You guessed the correct word! The word was {word}!\n") #Player guessed the right word and win the game
+        if word == display: #Player guessed the right word and win the game
+            print(Fore.GREEN + f"\nGood job! You guessed the correct word! The word was {word}!\n") 
             game_over = True
-        if tries == 0:
-            print(Fore.RED + f"\nOh no! You are out of tries and lost the game. The word was {word}.\n") #Player ran out of tries and loose the game
+        if tries == 0:  #Player ran out of tries and loose the game
+            print(Fore.RED + f"\nOh no! You are out of tries and lost the game. The word was {word}.\n")
             game_over = True
         
     play_again = input(Fore.YELLOW + "Would you like to play again? \nType 'Y' to play again, or type any other key to quit.\n").upper() #Ask player to restart or quit game
@@ -142,7 +151,8 @@ def game():
     else: 
         print("Thank you for playing, good bye!") #Quit game
         sys.exit()
-        
+
+
 def main():
     """
     Call game functions
@@ -150,5 +160,6 @@ def main():
     title_page()
     welcome_message()
     game()
+
 
 main()
