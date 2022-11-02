@@ -13,7 +13,7 @@ If the player guess the whole word correctly they win the game, if they run out 
 ## README table of content
 - [Milestone project 3](#milestone-projekt-3)
 - [Live project app](#live-project-app)
-- [Screenshots of website](#screenshots-of-website)
+- [Screenshots of app](#screenshots-of-app)
 - [Flowchart](#flowchart)
 - [User stories](#user-stories)
 - [Color scheme and imagery](#color-scheme-and-imagery)
@@ -36,12 +36,17 @@ If the player guess the whole word correctly they win the game, if they run out 
     - [Acknowledgement](#acknowledgement)
     - [External sources used](#external-sources-used)
 
-## Screenshots of live app
+## Screenshots of app
+
+![Different media screenshots](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Printscreen1.jpg)
 
 ### Guess the word game
-![](image)
-![](image)
-![](image)
+![Game start](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game1.jpg)
+![Choose a difficulty level](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game2.jpg)
+![Guessing letters](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game3.jpg)
+![Error messages](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game4.jpg)
+![Win game](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game6%20-%20win.jpg)
+![Lose game](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game5%20-%20lose.jpg)
 
 ## Flowchart
 ![](image/pdf)
