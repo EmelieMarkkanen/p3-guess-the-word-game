@@ -132,6 +132,10 @@ Design and other content written by me.
 
 ### Acknowledgement
 
+##### Thank you to <br>
+Code institute mock terminal<br>
+Jan-Åke Fonnaland and Anders Colliander for game testing
+
 ### External sources used
 - https://pypi.org/project/colorama/
 - https://www.lucidchart.com/pages/
