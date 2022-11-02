@@ -41,17 +41,23 @@ If the player guess the whole word correctly they win the game, if they run out 
 ![Different media screenshots](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Printscreen1.jpg)
 
 ### Guess the word game
-Start game
+
+#### Start game
 ![Game start](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game1.jpg)
-Choose difficulty level
+
+#### Choose difficulty level
 ![Choose a difficulty level](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game2.jpg)
-Guess a letter
+
+#### Guess a letter
 ![Guessing letters](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game3.jpg)
-Error messages
+
+#### Error messages
 ![Error messages](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game4.jpg)
-Win game
+
+#### Win game
 ![Win game](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game6%20-%20win.jpg)
-Lose game
+
+#### Lose game
 ![Lose game](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game5%20-%20lose.jpg)
 
 ## Flowchart
