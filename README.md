@@ -7,8 +7,86 @@ The game generates a random secret word every round.
 The player chooses the difficulty level of the game; easy, normal or hard. Easy gives the player 10 tries to win, normal 7 tries and hard 5 tries. 
 If the player guess the whole word correctly they win the game, if they run out of tries they loose and will have the option to start over.
 
+## Live project app
+[View live app here]()
+
+## README table of content
+- [Milestone project 3](#milestone-projekt-3)
+- [Live project app](#live-project-app)
+- [Screenshots of website](#screenshots-of-website)
+- [Flowchart](#flowchart)
+- [User stories](#user-stories)
+- [Color scheme and imagery](#color-scheme-and-imagery)
+- [Features](#features)
+  -[]
+  -[]
+  -[]
+- [Technology](#technology)
+   - [Languages used](#languages-used)
+   - [Other applications used](#other-applications-used)
+- [Testing](#testing)
+   - [Player Experience](#player-experience)
+   - [Code testing](#code-testing)
+   - [Known issues](#known-issues)
+- [Deployment](#deployment)
+    -[Github and git](#github-and-git)
+    -[Heroku](#heroku)
+- [Credits](#credits)
+    - [Content](#content)
+    - [Acknowledgement](#acknowledgement)
+    - [External sources used](#external-sources-used)
+
+## Screenshots of live app
+
+### Guess the word game
+![](image)
+![](image)
+![](image)
+
+## Flowchart
+![](image/pdf)
+
+## User stories
+-
+-
+-
+-
+
+## Color scheme and imagery
 
 
+## Features
+-
+-
+-
+
+## Technology
+
+### Languages used
+
+### Other applications used
+
+## Testing
+
+### Player Experience
+
+### Code testing
+
+### Known issues
+
+## Deployment
+
+### Github and git
+
+### Heroku
+
+## Credits
+
+### Content
+
+### Acknowledgement
+
+### External sources used
 
 
 Sources:
