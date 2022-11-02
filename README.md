@@ -7,8 +7,11 @@ The game generates a random secret word every round.
 The player chooses the difficulty level of the game; easy, normal or hard. Easy gives the player 10 tries to win, normal 7 tries and hard 5 tries. 
 If the player guess the whole word correctly they win the game, if they run out of tries they loose and will have the option to start over.
 
+![](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Printscreen1.jpg)
+Screenshot created using [Am I Responsive](https://ui.dev/amiresponsive)
+
 ## Live project app
-[View live app here]()
+[View live app here](https://p3-guess-the-word.herokuapp.com/)
 
 ## README table of content
 - [Milestone project 3](#milestone-projekt-3)
@@ -36,11 +39,8 @@ If the player guess the whole word correctly they win the game, if they run out 
     - [Acknowledgement](#acknowledgement)
     - [External sources used](#external-sources-used)
 
-## Screenshots of app
 
-![](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Printscreen1.jpg)
-
-### Guess the word game
+## Guess the word game
 
 #### Start game
 ![Game start](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game1.jpg)
@@ -66,20 +66,17 @@ I created the flowchart for this project using Lucidchart.
 [View PDF of flowchart here](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/pdf/Guess-the-word-flowchart.pdf)
 
 ## User stories
--
--
--
--
+- 
+- 
+- 
 
 ## Color scheme and imagery
 To add text color to the terminal I've used the imported library [Colorama](https://pypi.org/project/colorama/).
 To create the ASCII Art on the game start screen I've used [ASCII Art Generator](https://patorjk.com/software/taag/#p=display&h=2&v=2&f=Big&t=Guess%20the%0Asecretword!)
 
-
-## Features
--
--
--
+## Future features to add 
+- Add better visual aspects to make the app more interesting for the user.
+- Create different word categories for the user to choose between
 
 ## Technology
 
@@ -92,9 +89,12 @@ For this project I've used [Python](https://en.wikipedia.org/wiki/Python_(progra
 ## Testing
 
 ### Player Experience
+-
+-
+-
 
 ### Code testing
-Gitpod have pep8 installed for code validation. No issues found except a few warnings about to long lines. 
+Gitpod have PEP8 installed for code validation. PEP8 errors will be underlined in red, as well as being listed in the 'Problems' tab beside the terminal.
 <br>
 Testing have been done continuously during creation. 
 
@@ -132,9 +132,10 @@ Design and other content written by me.
 
 ### Acknowledgement
 
-##### Thank you to <br>
-Code institute mock terminal<br>
-Jan-Åke Fonnaland and Anders Colliander for game testing
+#### Thank you to <br>
+Code institute for the mock terminal<br>
+Jan-Åke Fonnaland and Anders Colliander for testing<br>
+
 
 ### External sources used
 - https://pypi.org/project/colorama/
@@ -142,7 +143,5 @@ Jan-Åke Fonnaland and Anders Colliander for game testing
 - https://www.reddit.com/r/learnpython/comments/l10k8h/is_there_a_way_to_unpack_a_list_with_f_stings/
 - ASCII Art Generator https://patorjk.com/software/taag/#p=display&h=2&v=2&f=Big&t=Guess%20the%0Asecretword!
 - https://www.w3schools.com/python/default.asp
-
-Heroku https://p3-guess-the-word.herokuapp.com/
 
 

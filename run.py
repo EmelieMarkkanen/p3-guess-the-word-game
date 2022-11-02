@@ -62,13 +62,13 @@ def welcome_message():
     player_name = None
     while True:
 
-        player_name = input("Please enter your name to play\n").capitalize() #Ask player to enter their name
+        player_name = input("Please enter your name to play\n").capitalize()
 
         if not player_name.isalpha():
             print("Name must be letters only") #Player name can only be alphabetical letters
             continue
         else:
-            print("\nWelcome to Guess the secret word, " + Fore.CYAN + f"{player_name}" + Fore.WHITE + "!\n") #Welcome player to the game
+            print("\nWelcome to Guess the secret word, " + Fore.CYAN + f"{player_name}" + Fore.WHITE + "!\n") 
             break
 
 
@@ -129,9 +129,9 @@ def game():
                 i = word.find(guess, i)
                 display = display[:i] + guess + display[i + 1:]
                 i += 1
-            print(Fore.BLUE + "You guessed a correct letter!") 
+            print(Fore.BLUE + "You guessed a correct letter!")
             guessed_letters.append(guess)
-        else: 
+        else:
             print(Fore.RED + f"Sorry, the letter {guess} is not in the word.") 
             tries -= 1
             guessed_letters.append(guess)
