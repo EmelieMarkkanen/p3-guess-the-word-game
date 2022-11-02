@@ -38,7 +38,7 @@ If the player guess the whole word correctly they win the game, if they run out 
 
 ## Screenshots of app
 
-!(https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Printscreen1.jpg)
+![](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Printscreen1.jpg)
 
 ### Guess the word game
 
@@ -96,9 +96,11 @@ For this project I've used [Python](https://en.wikipedia.org/wiki/Python_(progra
 ### Code testing
 Git pod have pep8 installed for code checking. 
 <br>
-
+Testing have been done continuously during creation. 
 
 ### Known issues
+One bug found by one user, but I've not been able to recreate the issue. The input line shows both player name and already guessed letters. 
+![](/workspace/p3-guess-the-word-game/docs/images/bug.jpg)
 
 ## Deployment
 
@@ -124,6 +126,9 @@ This project was deployed using Code Institutes mock terminal for Heroku.
 ## Credits
 
 ### Content
+I've used this [tutorial](https://www.youtube.com/watch?v=WpHieqiOVFE&list=PLQGawZx_TVhrNvQBAKPrPaMxZmw2RYTa1&index=15) to build a portion of this game, created by John Seiffert. Some similarities will occur. 
+<br>
+Design and other content written by me. 
 
 ### Acknowledgement
 
