@@ -2,7 +2,7 @@
 
 ## Milestone project 3
 
-This is a Guess the secret word game, wherein the player have a set amounts of tries to guess the secret word to win the game. 
+This is a Guess the secret word game, wherein the player have a set amount of tries to guess the secret word to win the game. 
 The game generates a random secret word every round. 
 The player chooses the difficulty level of the game; easy, normal or hard. Easy gives the player 10 tries to win, normal 7 tries and hard 5 tries. 
 If the player guess the whole word correctly they win the game, if they run out of tries they loose and will have the option to start over.
@@ -16,9 +16,8 @@ Screenshot created using [Am I Responsive](https://ui.dev/amiresponsive)
 ## README table of content
 - [Milestone project 3](#milestone-projekt-3)
 - [Live project app](#live-project-app)
-- [Screenshots of app](#screenshots-of-app)
-- [Flowchart](#flowchart)
 - [User stories](#user-stories)
+- [Flowchart](#flowchart)
 - [Color scheme and imagery](#color-scheme-and-imagery)
 - [Features](#features)
 - [Future features to add ](#future-features-to-add)
@@ -28,9 +27,8 @@ Screenshot created using [Am I Responsive](https://ui.dev/amiresponsive)
 - [Testing](#testing)
     - [Player Experience](#player-experience)
     - [Code testing](#code-testing)
-    - [Known issues](#known-issues)
 - [Deployment](#deployment)
-    - [Github and git](#github-and-git)
+    - [Gitpod and git](#github-and-git)
     - [Heroku](#heroku)
 - [Credits](#credits)
     - [Content](#content)
@@ -38,36 +36,16 @@ Screenshot created using [Am I Responsive](https://ui.dev/amiresponsive)
     - [External sources used](#external-sources-used)
 
 
-## Guess the word game
-
-#### Start game
-![Game start](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game1.jpg)
-
-#### Choose difficulty level
-![Choose a difficulty level](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game2.jpg)
-
-#### Guess a letter
-![Guessing letters](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game3.jpg)
-
-#### Error messages
-![Error messages](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game4.jpg)
-
-#### Win game
-![Win game](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game6%20-%20win.jpg)
-
-#### Lose game
-![Lose game](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game5%20-%20lose.jpg)
+## User stories
+- Aa a potential user I should easily understand what kind of application this is
+- As a potential user I would like to get clear and logical feedback to my choices during the game
+- As a potential user I would like to be able to choose different levels of difficulty for the game
+- As a potential user I would like to be able to track my progress of the game and see weather I win or loose
 
 ## Flowchart
 I created the flowchart for this project using Lucidchart.
 <br>
 [View PDF of flowchart here](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/pdf/Guess-the-word-flowchart.pdf)
-
-## User stories
-- A potential user should easily understand what kind of application this is
-- The game should have a logical flow and feedback to user
-- The game should have clear feedback about user choices
-- The game should have multiple levels of difficulty to keep it interesting
 
 ## Color scheme and imagery
 To add text color to the terminal I've used the imported library [Colorama](https://pypi.org/project/colorama/).
@@ -100,27 +78,35 @@ For this project I've used [Python](https://en.wikipedia.org/wiki/Python_(progra
 ## Testing
 
 ### Player Experience
-- A potential user should easily understand what kind of application this is
+- Aa a potential user I should easily understand what kind of application this is
     - The starting visuals show the name of the game
-- The game should have a logical flow and feedback to user
+![Game start](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game1.jpg)
+
+- As a potential user I would like to be able to choose different levels of difficulty for the game
+![Choose a difficulty level](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game2.jpg)
+
+- As a potential user I would like to get clear and logical feedback to my choices during the game
     - Instructions to enter player name, choose a difficulty level and game rules are easy to follow
-- The game should have clear feedback about user choices
     - The player gets instant feedback in different colors depending on choice, and feedback with error messages if incorrect choices are made
-- The game should have multiple levels of difficulty to keep it interesting
-    - The game starts with the player choosing a level of difficulty for the game
+![Error messages](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game4.jpg)
+
+- As a potential user I would like to be able to track my progress of the game and see weather I win or loose
+    - Guessed letters are tracked and shown. Correct letters are added to the word, all letters are added to the list of guessed letters.
+    - Win or lose message is shown after the player guess the right word or run out of tries
+![Guessing letters](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game3.jpg)
+![Win game](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game6%20-%20win.jpg)
+![Lose game](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/Game5%20-%20lose.jpg)
+
 
 ### Code testing
 Gitpod have PEP8 installed for code validation. PEP8 errors will be underlined in red, as well as being listed in the 'Problems' tab beside the terminal.
+In Gitpod I've also run pylint run.py to check for any error messages and resolve those. 
 <br>
 Testing have been done continuously during creation in Gitpod terminal and Code Institute Heroku terminal.
 
-### Known issues
-One bug found by one user, but I've not been able to recreate the issue. The input line shows both player name and already guessed letters. The user tested the app on a Android Galaxy S21, with Chrome. 
-![](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/bug.jpg)
-
 ## Deployment
 
-### Github and git
+### Gitpod and git
 1. I created a repository in Github, named it p3-guess-the-word-game, and used the template Code-Institute-org/python-essentials-template
 2. Once the repository is created, click the green button to the right (Gitpod) to open Gitpod
 3. In the terminal I've used the run.py file provided by the template
@@ -151,7 +137,8 @@ Design and other content written by me.
 #### Thank you to <br>
 Code institute for the mock terminal<br>
 Jan-Åke Fonnaland and Anders Colliander for testing<br>
-
+CI Peer review on slack <br>
+My mentor Rohit for valuable input and feedback
 
 ### External sources used
 - https://pypi.org/project/colorama/
