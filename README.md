@@ -21,19 +21,17 @@ Screenshot created using [Am I Responsive](https://ui.dev/amiresponsive)
 - [User stories](#user-stories)
 - [Color scheme and imagery](#color-scheme-and-imagery)
 - [Features](#features)
-  -[]
-  -[]
-  -[]
+- [Future features to add ](#future-features-to-add)
 - [Technology](#technology)
-   - [Languages used](#languages-used)
-   - [Other applications used](#other-applications-used)
+    - [Languages used](#languages-used)
+    - [Other applications used](#other-applications-used)
 - [Testing](#testing)
-   - [Player Experience](#player-experience)
-   - [Code testing](#code-testing)
-   - [Known issues](#known-issues)
+    - [Player Experience](#player-experience)
+    - [Code testing](#code-testing)
+    - [Known issues](#known-issues)
 - [Deployment](#deployment)
-    -[Github and git](#github-and-git)
-    -[Heroku](#heroku)
+    - [Github and git](#github-and-git)
+    - [Heroku](#heroku)
 - [Credits](#credits)
     - [Content](#content)
     - [Acknowledgement](#acknowledgement)
@@ -66,17 +64,30 @@ I created the flowchart for this project using Lucidchart.
 [View PDF of flowchart here](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/pdf/Guess-the-word-flowchart.pdf)
 
 ## User stories
-- 
-- 
-- 
+- A potential user should easily understand what kind of application this is
+- The game should have a logical flow and feedback to user
+- The game should have clear feedback about user choices
+- The game should have multiple levels of difficulty to keep it interesting
 
 ## Color scheme and imagery
 To add text color to the terminal I've used the imported library [Colorama](https://pypi.org/project/colorama/).
-To create the ASCII Art on the game start screen I've used [ASCII Art Generator](https://patorjk.com/software/taag/#p=display&h=2&v=2&f=Big&t=Guess%20the%0Asecretword!)
+To create the ASCII Art on the game start screen I've used [ASCII Art Generator](https://patorjk.com/software/taag/#p=display&h=2&v=2&f=Big&t=Guess%20the%0Asecretword!).
+
+## Features
+- Player can enter their name
+- Choice of difficulty, amount of tries changes accordingly (10, 7 or 5 tries)
+- Random word generator
+- Encrypted word
+- Guessed letters are displayed 
+- Validation for non alphabetical characters, duplicate entries or multiple character entries
+- Tries not deducted if duplicate, non alphabetical or multiple characters entered
+- Messages in different colors to highlight information and replies to player
+- Choice to restart or quit game after win/lose
 
 ## Future features to add 
-- Add better visual aspects to make the app more interesting for the user.
+- Add better visual aspects to make the app more interesting for the user
 - Create different word categories for the user to choose between
+- Add a hint function with a set amount of hints to use every round
 
 ## Technology
 
@@ -89,17 +100,22 @@ For this project I've used [Python](https://en.wikipedia.org/wiki/Python_(progra
 ## Testing
 
 ### Player Experience
--
--
--
+- A potential user should easily understand what kind of application this is
+    - The starting visuals show the name of the game
+- The game should have a logical flow and feedback to user
+    - Instructions to enter player name, choose a difficulty level and game rules are easy to follow
+- The game should have clear feedback about user choices
+    - The player gets instant feedback in different colors depending on choice, and feedback with error messages if incorrect choices are made
+- The game should have multiple levels of difficulty to keep it interesting
+    - The game starts with the player choosing a level of difficulty for the game
 
 ### Code testing
 Gitpod have PEP8 installed for code validation. PEP8 errors will be underlined in red, as well as being listed in the 'Problems' tab beside the terminal.
 <br>
-Testing have been done continuously during creation. 
+Testing have been done continuously during creation in Gitpod terminal and Code Institute Heroku terminal.
 
 ### Known issues
-One bug found by one user, but I've not been able to recreate the issue. The input line shows both player name and already guessed letters. 
+One bug found by one user, but I've not been able to recreate the issue. The input line shows both player name and already guessed letters. The user tested the app on a Android Galaxy S21, with Chrome. 
 ![](https://github.com/EmelieMarkkanen/p3-guess-the-word-game/blob/main/docs/images/bug.jpg)
 
 ## Deployment
