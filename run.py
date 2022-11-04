@@ -1,6 +1,6 @@
 import random
 import sys
-from dictionary import dictionary
+from dictionary import DICTIONARY
 
 import colorama
 from colorama import Fore, Back, Style
@@ -76,7 +76,7 @@ def get_word():
     """
     Generates a random word from dictionary.py in capital letters
     """
-    word = random.choice(dictionary)
+    word = random.choice(DICTIONARY)
     return word.upper()
 
 
