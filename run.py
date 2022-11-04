@@ -7,6 +7,7 @@ from colorama import Fore, Back, Style
 
 colorama.init(autoreset=True)
 
+
 def title_page():
     """Show title page for game
     """
@@ -118,10 +119,12 @@ def game():
             print(Fore.YELLOW + "You have already guessed that letter") #Player can only guess the same letter once
             continue
 
-        #Check if letter is correct/incorrect
-        #deduct tries if incorrect
-        #add letter to guessed_letters
-        # display if correct letter
+        """
+        Check if letter is correct/incorrect
+        Deduct tries if incorrect
+        Add letter to guessed_letters
+        Display if correct letter
+        """
         i = 0
         if guess in word:
             while word.find(guess, i) != -1:

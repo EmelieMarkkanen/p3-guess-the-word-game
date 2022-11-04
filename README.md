@@ -63,6 +63,7 @@ To create the ASCII Art on the game start screen I've used [ASCII Art Generator]
 - Choice to restart or quit game after win/lose
 
 ## Future features to add 
+- Break up game() function into smaller easier to read functions
 - Add better visual aspects to make the app more interesting for the user
 - Create different word categories for the user to choose between
 - Add a hint function with a set amount of hints to use every round
